@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
         <title>Selectors</title>
         <style>
-            
-
+          p {
+              color: red; /* Селектор по элементу. Текст всех элементов с тегом "р" будет красного цвета*/
+          }  
+         #id_style {
+            color:rgb(160, 45, 150); /* Селектор по id. Любой элемент, содержащий данный id будет непонятного розового цвета*/
+          }
+          ol.list { color: blueviolet; /* Селектор по классу. Список с классом "list" будет сине-фиолетового цвета*/
+          }
+          .link1 {
+              color: green;
+          }
+          .link2 {
+              font-size: 12pt;
+              font-family: arial;
+          }
+          .link3 {
+              font-size: 20pt;
+              font-family: times new roman;
+          }
+          *{
+            margin: 20px;
+            padding: 0; /* Убираем отступы и поля для всех элементов */
+          }
         </style>
 </head>
 <body>
-    A
-#id
-.class
-.class1.class2
-*
-A   B
-A > B
-A + B
-A ~ B
-[attr]
-[attr='value']
-[attr^='value']
-[attr$='value']
-[attr*='value']
-[attr~='value']
-[attr|='value']
+    <p> Текст всех элементов с тегом "р" будет красного цвета</p>
+    <h2 id="id_style"> Любой элемент, содержащий данный id будет непонятного розового цвета</h2>
+    <ol class="list">
+        <li>
+            Lorem, ipsum dolor.
+        </li>
+        <li>
+            Селектор по классу. Список с классом "list" будет сине-фиолетового цвета
+        </li>
+        <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </li>
+    </ol>
+    <a href="#" class="link1 link2"> Мультиклассовое определение правил описания стиля. Ссылка стала зеленого цвета с типом шрифа- Arial и 12 размером шрифта</a> <br>
+    <a href="#" class="link1 link3"> Мультиклассовое определение правил описания стиля. Ссылка стала зеленого цвета с типом шрифа- Times new roman и 20 размером шрифта</a>
+
+
+
+
+
 </body>
 </html>
